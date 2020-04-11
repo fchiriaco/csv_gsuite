@@ -26,6 +26,7 @@
 		
 		<div class="row">
 		 <div class="col-xs-12">
+		  <hr>
 		  <div class="dropdown">
 			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SELEZIONA LA PROCEDURA PREFERITA
 							<span class="caret"></span>
@@ -36,12 +37,13 @@
 					<li><a href="dadb.php">Genera da tabella database</a></li>
 				</ul>
 		  </div>
+		  <hr>
 		 </div>
 		</div>
 		<div class="row">
 		  <div class="col-xs-12">
 			<p style="padding:20px">
-			<hr>
+			
 			Attraverso questa semplice applicazione è possibile generare il file <b>csv</b> per il caricamento massivo degli utenti in G-SUITE.
 			 <br>
 			 Si hanno tre possibilità:
@@ -58,7 +60,7 @@
 			la mail dell'utente sarà generata così:  <b>cognome.nome@dominio</b>  (tutto minuscolo senza spazi)<br>
 			La password, da cambiare al primo collegamento, sarà: <b>Cognomenome*</b> (Maiuscola la prima senza spazi) 
 			<br><br>
-			I file verranno salvati nella cartella dell'applicazione con i seguenti nomi:<br>
+			I file da usare per il caricamento massivo in g-suite verranno salvati nella cartella dell'applicazione con i seguenti nomi:<br>
 			<b>utentidb.csv</b> (se generato da un db mysql)<br>
 			<b>utenticsv.csv</b> (se generato da un file csv)<br>
 			<b>utentiman.csv</b> (se generato da un input manuale dell'utente)<br>

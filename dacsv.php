@@ -24,28 +24,44 @@
    
  <div class="container-fluid">
 		<h1 class="alert alert-info text-center" style="margin:0px;margin-bottom:5px;border:solid 2px #ffffff;border-radius:10px;"><?php echo $pagetitle ?></h1>
-		<pre>
-		Questa procedura prende i dati da un file CSV le cui righe hanno il formato seguente:
-		
-		cognome(separatore)nome
-		
-		esempio
-		rossi,mario
-		verdi,alberto
-		
-		oppure
-		rossi;mario
-		verdi;alberto
-		
-		oppure
-		rossi|mario
-		verdi|alberto
-		
-		Dal file di input viene poi generato in output il file utenticsv.csv pronto per il caricamento massivo utenti in G-SUITE
-				
-		</pre>
 		<div class="row">
-			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-sm-offset-3 col-lg-4 col-sm-offset-4">
+			<div class="col-xs-12 text-center">
+				<hr>
+				<a href="index.php" title="home" class="btn btn-danger">HOME <span class="glyphicon glyphicon-home"></span></a>
+				<hr>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-12 col-sm-5">
+				
+<pre>
+Il formato delle righe del file CSV inviato sarà seguente:
+
+cognome(carattere di separazione)nome
+		
+esempio 1
+
+rossi,mario
+verdi,alberto
+		
+esempio 2
+		
+rossi;mario
+verdi;alberto
+		
+esempio 3
+		
+rossi|mario
+verdi|alberto
+		
+Il  file generato in output sarà utenticsv.csv
+				
+</pre>
+			
+			</div>
+		
+			<div class="col-xs-12 col-sm-7 col-md-4 col-lg-3 bg-primary" style="padding:20px;">
 				<form action="esportacsv.php" method="POST" enctype="multipart/form-data">
 					
 					
@@ -69,7 +85,7 @@
 						<input type="text" required  class="form-control" id="uo" name="uo" placeholder:"es.: /alunni/1A">
 					</div>
   
-					<button type="submit" class="btn btn-default">Genera file</button>
+					<button type="submit" class="btn btn-success">Genera file</button>
 			</form>
 		</div>
 	</div>
@@ -77,6 +93,7 @@
 			
 		
   </div>
+  <br>
   <!-- JS -->
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
