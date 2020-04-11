@@ -54,7 +54,7 @@
 			 </ul>
 	
 			</p>
-			<p>
+			<p style="padding:20px">
 			&Egrave; sufficiente indicare solo nome e cognome, sarà poi la procedura a generare il resto, in particolare:
 			<br>
 			la mail dell'utente sarà generata così:  <b>cognome.nome@dominio</b>  (tutto minuscolo senza spazi)<br>
@@ -67,6 +67,8 @@
 			</p>
 			
 		  </div>
+		  
+		  
 		</div>
 		
    </div>
