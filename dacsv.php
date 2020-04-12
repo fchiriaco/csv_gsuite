@@ -61,7 +61,7 @@ Il  file generato in output sarà utenticsv.csv
 			
 			</div>
 		
-			<div class="col-xs-12 col-sm-7 col-md-4 col-lg-3 bg-primary" style="padding:20px;">
+			<div class="col-xs-12 col-sm-7 col-md-6 col-lg-4 bg-primary" style="padding:20px;">
 				<form action="esportacsv.php" method="POST" enctype="multipart/form-data">
 					
 					
