@@ -59,7 +59,9 @@ if ($con -> connect_errno) {
 }
 
 chmod('output',0777);
-$file = fopen("output/utentidb.csv","w+");
+
+$nomefileout = "output/utentidb" . rand(0,100) . ".csv";
+$file = fopen($nomefileout,"w+");
 $testata = "First Name [Required],Last Name [Required],Email Address [Required],Password [Required],Password Hash Function [UPLOAD ONLY],Org Unit Path [Required],New Primary Email [UPLOAD ONLY],Recovery Email,Home Secondary Email,Work Secondary Email,Recovery Phone [MUST BE IN THE E.164 FORMAT],Work Phone,Home Phone,Mobile Phone,Work Address,Home Address,Employee ID,Employee Type,Employee Title,Manager Email,Department,Cost Center,Building ID,Floor Name,Floor Section,Change Password at Next Sign-In,New Status [UPLOAD ONLY]";
 fwrite($file,$testata);
 fwrite($file,"\n");
@@ -79,7 +81,7 @@ while($row = $rs->fetch_object())
 fclose($file);
 chmod('output',0755);
 echo '<p style="text-align:center">';
-echo 'File per caricamento massivo utenti  G_SUITE creato correttamente (nome file utentidb.csv): <a href="output/utentidb.csv" title="scarica">APRI</a><br><br>';
+echo "File per caricamento massivo utenti  G_SUITE creato correttamente (nome file {$nomefileout}): <a href=\"{$nomefileout}\" title=\"scarica\">APRI</a><br><br>";
 echo '<a href="index.php" title="home">TORNA INDIETRO</a>';
 echo '</p>';
 
