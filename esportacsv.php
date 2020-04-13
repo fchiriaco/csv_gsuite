@@ -59,7 +59,7 @@ while(!feof($filein))
 {
 	
 	$riga = fgets($filein);
-	if(trim($riga) == "")
+	if(trim($riga) == "" || trim($riga) == $separatore )
 		continue;
 	$row = explode($separatore,$riga);
 	
