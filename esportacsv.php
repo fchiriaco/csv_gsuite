@@ -30,6 +30,10 @@ if(!$datiok)
 
 $dominio = filter_var($_POST["dominio"],FILTER_SANITIZE_STRING);
 $uo = filter_var($_POST["uo"],FILTER_SANITIZE_STRING);
+
+if(substr($uo,0,1) != "/")
+	$uo = "/" . $uo;
+
 $separatore = filter_var($_POST["separatore"],FILTER_SANITIZE_STRING);
 
 $nomefile = 'uploads/' . $_FILES['file']['name'];

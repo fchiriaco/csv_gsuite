@@ -50,6 +50,8 @@ $cognome = filter_var($_POST["campocognome"],FILTER_SANITIZE_STRING);
 $nome = filter_var($_POST["camponome"],FILTER_SANITIZE_STRING);
 $dominio = filter_var($_POST["dominio"],FILTER_SANITIZE_STRING);
 $uo = filter_var($_POST["uo"],FILTER_SANITIZE_STRING);
+if(substr($uo,0,1) != "/")
+	$uo = "/" . $uo;
 
 
 $con = new mysqli($hostmysql,$usermysql,$pwdmysql,$dbmysql);

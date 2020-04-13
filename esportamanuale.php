@@ -28,6 +28,9 @@ if(!$datiok)
 
 $dominio = filter_var($_POST["dominio"],FILTER_SANITIZE_STRING);
 $uo = filter_var($_POST["uo"],FILTER_SANITIZE_STRING);
+if(substr($uo,0,1) != "/")
+	$uo = "/" . $uo;
+
 $utenti = filter_var($_POST["utenti"],FILTER_SANITIZE_STRING);
 
 $arutenti = explode('|',$utenti);
