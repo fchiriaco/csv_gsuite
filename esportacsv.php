@@ -65,7 +65,7 @@ while(!feof($filein))
 	
 	$username = str_replace(array(" ","'","\n","\r"),"",strtolower($row[0] . '.' . $row[1] . "@" . $dominio));
 	$password = str_replace(array(" ","'","\n","\r"),"",ucfirst(strtolower($row[0] . $row[1] . "*")));
-	$stringa = strtoupper(str_replace(array(" ","'","\n","\r"),"",$row[0])) . "," . strtoupper(str_replace(array(" ","'","\n","\r"),"",$row[1])) . "," . $username  . "," .  $password . ",," . $uo . ",,,,,,,,,,,,,,,,,,,,True,";
+	$stringa = strtoupper(str_replace(array("\n","\r"),"",$row[0])) . "," . strtoupper(str_replace(array("\n","\r"),"",$row[1])) . "," . $username  . "," .  $password . ",," . $uo . ",,,,,,,,,,,,,,,,,,,,True,";
 	fwrite($fileout,$stringa);
 	fwrite($fileout,"\n");
 	
