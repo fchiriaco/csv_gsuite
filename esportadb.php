@@ -33,7 +33,7 @@ if(!isset($_POST["uo"]) || empty(trim($_POST["uo"])))
 if(!$datiok)
 {
 	echo '<p style="text-align:center">';
-	echo 'Dati insufficienti per procedere';
+	echo 'Dati insufficienti per procedere ';
 	echo '<a href="dacsv.php" title="back">TORNA INDIETRO</a>';
 	echo '</p>';
 	exit;
