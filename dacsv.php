@@ -66,7 +66,7 @@ Il  file generato in output sarà utenticsv.csv
 					
 					
 					<div class="form-group">
-						<label for="file">File csv di input</label>
+						<label for="file">File csv di input non contenente le intestazioni dei campi, ma solo i dati</label>
 						<input type="file" required  class="form-control" id="file" name="file">
 					</div>
 					

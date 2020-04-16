@@ -49,7 +49,7 @@
 			 Si hanno tre possibilità:
 			 <ul>
 			 <li>Generare il file csv esportando i dati da un database mysql che si possiede</li>
-			 <li>Generare il file csv da un file csv contenente l'elenco degli utenti (cognome e nome separati da un delimitatore es. ; , | oppure altro simbolo)</li>
+			 <li>Generare il file csv da un file csv contenente l'elenco degli utenti (cognome e nome separati da un delimitatore es. ; , | oppure altro simbolo). <b>Il file csv sorgente non deve contenere l'intestazione dei campi, ma solo i dati</b></li>
 			 <li>inserimento veloce della lista degli utenti indicando cognome e nome e poi generare il file completo</li>
 			 </ul>
 	

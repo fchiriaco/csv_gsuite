@@ -19,7 +19,7 @@ if (!is_uploaded_file($_FILES['file']['tmp_name']))
 if(!$datiok)
 {
 	echo '<p style="text-align:center">';
-	echo 'Dati insufficienti per procedere';
+	echo 'Dati insufficienti per procedere ';
 	echo '<a href="dacsv.php" title="back">TORNA INDIETRO</a>';
 	echo '</p>';
 	exit;
@@ -59,8 +59,11 @@ while(!feof($filein))
 {
 	
 	$riga = fgets($filein);
-	if(trim($riga) == "" || trim($riga) == $separatore )
+	
+		
+	if(trim(str_replace(array(" ",$separatore),"",$riga)) == "")
 		continue;
+	
 	$row = explode($separatore,$riga);
 	
 	$username = str_replace(array(" ","'","\n","\r"),"",strtolower($row[0] . '.' . $row[1] . "@" . $dominio));
